@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/karenmcgee/Downloads/bikeshare.db" foreign_keys="1"/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="4472"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="stations"/><default_encoding codec=""/><browsetable_info data="AAAAAA=="/></tab_browse><tab_sql><sql name="Lesson 2 - Drill Select from and where.sql">/*1. The ID's and durations for all trips of duration greater than 500, 
+ordered by duration. 
+2. Every column of the stations table for station id 84.
+3. The min temperatures of all the occurrences of rain in zip 94301.*/
+
+select trip_id, bike_id, duration
+from trips
+where duration &gt; 500
+
+select * 
+from stations
+where station_id = 84
+
+select min(MinTemperatureF), zip
+from weather
+where zip = 94301</sql><sql name="SQL 3">/*What was the hottest day in our data set? Where was that?
+How many trips started at each station?
+What's the shortest trip that happened?
+What is the average trip duration, by end station? */
+
+select max(MaxTemperatureF), date
+from weather
+
+select count(trip_id) trip_total, start_station
+from trips
+group by start_date
+
+select min(duration), start_station
+from trips
+
+select avg(duration), end_station
+from trips</sql><current_tab id="1"/></tab_sql></sqlb_project>
