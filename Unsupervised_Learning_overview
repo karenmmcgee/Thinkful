@@ -1,0 +1,5 @@
+Define the likelihood that an individual will contract a specific disease. Answer: Supervised
+Translate a set of images into variables for modeling. Answer: Unsupervised
+An ecommerce company wants to identify power users. Answer: Both Supervised or Unsupervised 
+That same company wants to see shopping patterns in users. Answer: Unsupervised
+You want to reduce the number of variables inputting into your random forest model. Answer: Both Supervised or Unsupervised
