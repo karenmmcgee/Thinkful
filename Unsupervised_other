@@ -1,0 +1,42 @@
+You've seen how these three methods work on three blobs of reasonably separated data. Now go back and change the data. 
+Create more or fewer blobs, and set the blobs closer together or farther apart. 
+Set up at least three different blob configuations, then run the four methods ( k
+ -means, mean shift, spectral clustering and affinity propagation) on each one. 
+ Write up a report for your mentor where you discuss what you learned about the clustering methods based on their 
+ relative performance for your different blob setups.
+ 
+ Mean shift: Origianl started with quantile of 0.3 and sample size of 500
+            Change the quantile to 0.5 and sample size to 1000. 
+ Result = 1 cluster
+             Change the quantile to 0.1 keep sample size at 1000
+ Result = 4 cluster
+             Change the quantile to 0.3 keep sample size at 1000
+ Result = 3 cluster
+ 
+ Conclusion: it appears that as the quantile number increase the number of clusters also increase
+ 
+ Spatial clustering: Origianlly started with 5 clusters
+                     col_0    0    1   2    3    4
+                     row_0
+                     0        0  249    0    0  113
+                     1      186    0  132    1    1
+                     2        0    0   59  164   95
+            Change the number of cluster to 7
+ Result = 
+ col_0    0    1   2    3    4    5    6
+row_0                                  
+0        0    0   0  156  124    0   82
+1      115    5  23    1    0  176    0
+2        1  188   0    1    0   11  117
+
+            Change the number of cluster to 10
+            
+ Result =  
+ col_0    0   1    2    3    4    5  6   7   8    9
+row_0                                             
+0        0   0  128    0    2    0  0   0  93  139
+1       19  11    1  179    0  106  4   0   0    0
+2      136   0   23    2  130    1  0  26   0    0
+
+Conclusion: increasing the number of clusters is not giving a wide distance between all of the clusters. 
+
